@@ -35,7 +35,7 @@ void init() {
         exit(1);
     }
 
-    unflippedTileTexture = IMG_LoadTexture(renderer, "tiles/cat.png");
+    unflippedTileTexture = IMG_LoadTexture(renderer, "cat.png");
     if (unflippedTileTexture == NULL) {
         printf("Failed to load unflipped tile image! SDL_image Error: %s\n", IMG_GetError());
         exit(1);
@@ -43,7 +43,7 @@ void init() {
 
     for (int i = 0; i < TOTAL_COLORS; i++) {
         char filename[50];
-        sprintf(filename, "tiles/image%d.png", i + 1);
+        sprintf(filename, "image%d.png", i + 1);
         tileTextures[i] = IMG_LoadTexture(renderer, filename);
         if (tileTextures[i] == NULL) {
             printf("Failed to load image %d! SDL_image Error: %s\n", i + 1, IMG_GetError());
